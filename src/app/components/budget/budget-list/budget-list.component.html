@@ -1,0 +1,28 @@
+<h1>Lista de Presupuestos</h1>
+<table class="table-striped table fixed-table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Cliente</th>
+    <th scope="col">Fecha</th>
+    <th scope="col">Módulos</th>
+    <th scope="col">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (budget of budgets; track budget) {
+      <tr>
+        <td>{{ budget.id }}</td>
+        <td>{{ budget.budget.client }}</td>
+        <td>{{ budget.budget.date }}</td>
+        <td>{{ budget.budget.modules.length }}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-secondary"
+                  (click)="viewDetail(budget.id)">
+            <i class="bi bi-calculator-fill"></i>
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

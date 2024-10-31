@@ -1,0 +1,77 @@
+<!-- BUILT IT FROM:
+https://getbootstrap.com/docs/5.3/forms/form-control/#example
+https://getbootstrap.com/docs/5.3/forms/select/#default
+https://getbootstrap.com/docs/5.3/forms/select/#default -->
+<form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
+  <h1>Formulario de Cotizacion</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="form-label">Fecha de Cotizacion</label>
+      <input type="date" name="" id="date"
+             class="form-control" formControlName="date">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Cliente</label>
+      <input type="text" name="" id="client"
+             class="form-control" formControlName="client">
+    </div>
+  </div>
+  <div class="m-5"></div>
+  <button type="button" class="btn btn-success mb-5" (click)="addModule()">Agregar Modulo</button>
+  <div class="col-md-6" formArrayName="modules">
+
+    @for (module of modules.controls; track $index) {
+      <div class="row" [formGroupName]="$index">
+        <div class="d-flex align-items-baseline">
+          <h4 class="form-label">Modulo #{{$index + 1}}</h4>
+          <button type="button" class="btn btn-close m-3"
+                  (click)="removeModule($index)"></button>
+        </div>
+
+        <div class="col-md-6">
+
+          <label class="form-label">Tipo Modulo</label>
+          <select name="" id="moduleType" class="form-control"
+          formControlName="moduleType">
+            @for (type of modulesTypes; track type) {
+              <option [ngValue]="type">{{type.name}}</option>
+            }
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Ambiente</label>
+          <select name="" id="ambient" class="form-control"
+          formControlName="ambient">
+            @for (ambient of ambients; track ambient) {
+              <option [value]="ambient">{{ambient}}</option>
+            }
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Precio</label>
+          <input type="number" name="" id="price"
+                 class="form-control" formControlName="price">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Lugares</label>
+          <input type="text" name="" id="places"
+                 class="form-control" formControlName="places">
+        </div>
+      </div>
+    }
+    <div class="m-3"></div>
+  </div>
+  <div class="m-5"></div>
+  <div class="col-12 d-flex justify-content-end">
+    <div>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Volver</button>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>
+</form>

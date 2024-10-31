@@ -1,0 +1,21 @@
+<!-- BUILD IT FROM HERE https://getbootstrap.com/docs/5.3/components/card/#sizing -->
+<div class="card-body ">
+  <h1>Presupuesto {{id}}</h1>
+  <h5>Cajas necesarias: {{boxsQuantity}}</h5>
+  <h3>LIVING</h3>
+  @for (module of modulesOfLiving; track module) {
+    <p>{{module.moduleType.name}} ({{module.moduleType.slots}}) - $ {{module.moduleType.price}}</p>
+  }
+  <h3>COCINA</h3>
+  @for (module of modulesOfKitchen; track module) {
+    <p>{{module.moduleType.name}} ({{module.moduleType.slots}}) - $ {{module.moduleType.price}}</p>
+  }
+  <h3>DORMITORIO</h3>
+  @for (module of modulesOfRoom; track module) {
+    <p>{{module.moduleType.name}} ({{module.moduleType.slots}}) - $ {{module.moduleType.price}}</p>
+  }
+  <h3>COMEDOR</h3>
+  @for (module of modulesOfComedor; track module) {
+    <p>{{module.moduleType.name}} ({{module.moduleType.slots}}) - $ {{module.moduleType.price}}</p>
+  }
+</div>
