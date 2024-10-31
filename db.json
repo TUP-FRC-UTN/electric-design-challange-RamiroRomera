@@ -1,5 +1,141 @@
 {
-  "budgets": [],
+  "budgets": [
+    {
+      "id": "174b",
+      "budget": {
+        "date": "2024-10-08",
+        "client": "123",
+        "modules": [
+          {
+            "moduleType": {
+              "id": "2",
+              "name": "Interruptor doble",
+              "slots": 2,
+              "price": 2000
+            },
+            "ambient": "Cocina"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5206",
+      "budget": {
+        "date": "2024-10-01",
+        "client": "Ramiro",
+        "modules": [
+          {
+            "moduleType": {
+              "id": "3",
+              "name": "Toma corriente simple",
+              "slots": 1,
+              "price": 1500
+            },
+            "ambient": "Cocina"
+          },
+          {
+            "moduleType": {
+              "id": "6",
+              "name": "USB",
+              "slots": 1,
+              "price": 5000
+            },
+            "ambient": "Living"
+          },
+          {
+            "moduleType": {
+              "id": "3",
+              "name": "Toma corriente simple",
+              "slots": 1,
+              "price": 1500
+            },
+            "ambient": "Cocina"
+          },
+          {
+            "moduleType": {
+              "id": "2",
+              "name": "Interruptor doble",
+              "slots": 2,
+              "price": 2000
+            },
+            "ambient": "Cocina"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3c51",
+      "budget": {
+        "date": "2024-10-15",
+        "client": "123",
+        "modules": [
+          {
+            "moduleType": {
+              "id": "2",
+              "name": "Interruptor doble",
+              "slots": 2,
+              "price": 2000
+            },
+            "ambient": "Cocina"
+          },
+          {
+            "moduleType": {
+              "id": "2",
+              "name": "Interruptor doble",
+              "slots": 2,
+              "price": 2000
+            },
+            "ambient": "Comedor"
+          },
+          {
+            "moduleType": {
+              "id": "4",
+              "name": "Toma corriente doble",
+              "slots": 2,
+              "price": 3000
+            },
+            "ambient": "Dormitorio"
+          },
+          {
+            "moduleType": {
+              "id": "2",
+              "name": "Interruptor doble",
+              "slots": 2,
+              "price": 2000
+            },
+            "ambient": "Cocina"
+          },
+          {
+            "moduleType": {
+              "id": "6",
+              "name": "USB",
+              "slots": 1,
+              "price": 5000
+            },
+            "ambient": "Comedor"
+          },
+          {
+            "moduleType": {
+              "id": "4",
+              "name": "Toma corriente doble",
+              "slots": 2,
+              "price": 3000
+            },
+            "ambient": "Living"
+          },
+          {
+            "moduleType": {
+              "id": "5",
+              "name": "Toma corriente triple",
+              "slots": 3,
+              "price": 1700
+            },
+            "ambient": "Living"
+          }
+        ]
+      }
+    }
+  ],
   "module-types": [
     {
       "id": "1",
